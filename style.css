@@ -1,53 +1,19 @@
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
-body {
-    background-color: #0033cc;
-    margin: 0;
-    font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
-    color: white;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.screen-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px;
-}
-
+body { background-color: #0033cc; margin: 0; font-family: sans-serif; color: white; height: 100vh; overflow: hidden; }
+.screen-container { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
 .hidden { display: none !important; }
-
-/* Polaroid styling */
-.polaroid-frame {
-    background: white;
-    padding: 10px 10px 35px 10px;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-    transform: rotate(-4deg);
-    position: relative;
-}
-#main-photo { width: 190px; height: 230px; object-fit: cover; }
-.accessory-bow { position: absolute; top: -18px; right: -18px; font-size: 45px; }
-.bear-icon { font-size: 55px; margin-top: 15px; text-align: center; }
-
-/* Keypad styling */
-.prompt { font-size: 1.3rem; margin-bottom: 12px; font-weight: bold; }
+.polaroid-frame { background: white; padding: 10px 10px 30px 10px; transform: rotate(-3deg); position: relative; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+#main-photo { width: 180px; height: 220px; object-fit: cover; }
+.accessory-bow { position: absolute; top: -15px; right: -15px; font-size: 40px; }
+.bear-icon { font-size: 50px; margin-top: 10px; }
+.prompt { font-size: 1.2rem; margin: 15px 0; font-weight: bold; }
 .dots-box { display: flex; gap: 15px; margin-bottom: 25px; }
-.dot { width: 50px; height: 50px; border: 2.5px solid white; border-radius: 10px; }
+.dot { width: 45px; height: 45px; border: 2px solid white; border-radius: 8px; }
 .dot.active { background: white; }
-
-.numpad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.numpad button {
-    width: 75px; height: 75px; border-radius: 50%; border: 2px solid white;
-    background: transparent; color: white; font-size: 1.8rem;
-}
-.numpad button:active { background: rgba(255,255,255,0.25); }
-
-/* Message screen */
-.main-title { font-size: 2.2rem; color: #ffeb3b; text-shadow: 2px 2px #000; }
-.media-box img { width: 280px; border-radius: 15px; border: 4px solid white; }
-.message { font-size: 1.2rem; line-height: 1.6; padding: 0 15px; }
-.action-btn { background: #000; color: #fff; border: none; padding: 12px 45px; border-radius: 30px; font-size: 1.1rem; }
-
+.numpad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.numpad button { width: 70px; height: 70px; border-radius: 50%; border: 2px solid white; background: transparent; color: white; font-size: 1.5rem; }
+.media-gallery { display: flex; flex-direction: column; gap: 15px; align-items: center; margin: 20px 0; }
+.anniversary-img { width: 80vw; max-width: 280px; border-radius: 10px; border: 3px solid white; }
+#surprise-screen { overflow-y: auto; justify-content: flex-start; padding: 40px 10px; }
+.main-title { font-size: 1.8rem; text-align: center; color: #ffeb3b; }
+.action-btn { background: white; color: black; border: none; padding: 10px 30px; border-radius: 20px; margin-top: 20px; }
