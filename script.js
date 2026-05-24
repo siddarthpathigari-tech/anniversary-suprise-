@@ -1,5 +1,5 @@
 let inputBuffer = "";
-const secret = "2405"; // Your anniversary date
+const secret = "2505"; 
 
 function add(val) {
     if (inputBuffer.length < 4) {
@@ -7,7 +7,7 @@ function add(val) {
         render();
     }
     if (inputBuffer.length === 4) {
-        setTimeout(verify, 350);
+        setTimeout(verify, 300);
     }
 }
 
@@ -28,10 +28,14 @@ function verify() {
     if (inputBuffer === secret) {
         document.getElementById('passcode-screen').classList.add('hidden');
         document.getElementById('surprise-screen').classList.remove('hidden');
+        
+        const music = document.getElementById('bg-music');
+        music.play().catch(() => {
+            document.addEventListener('click', () => music.play(), { once: true });
+        });
     } else {
         if (navigator.vibrate) navigator.vibrate(200);
-        alert("Incorrect! Hint: Today's date? ❤️");
+        alert("Wrong code! ❤️");
         del();
     }
 }
-
